@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shabrin ❤️ Md Yaseen | Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Poppins,sans-serif;background:#f5f7ff;color:#222}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('1000058232.png') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+h1{font-family:'Playfair Display',serif;font-size:4rem;color:#D4AF37}
+.btn{background:#D4AF37;color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none}
+.section{padding:70px 20px;text-align:center}
+.card{max-width:900px;margin:auto;background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.countdown{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.box{background:#4169E1;color:#fff;padding:20px;border-radius:12px;min-width:90px}
+.box span{font-size:2rem;font-weight:bold;display:block}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;max-width:1000px;margin:auto}
+.gallery img{width:100%;border-radius:12px}
+footer{background:#4169E1;color:white;padding:25px;text-align:center}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div>
+<h1>Shabrin ❤️ Md Yaseen</h1>
+<h3>Wedding Invitation</h3>
+<p>10 July 2026 | 1:00 PM</p>
+<p>PW Colony, Macharla</p>
+<a class="btn" href="#details">View Details</a>
+</div>
+</section>
+
+<section id="details" class="section">
+<h2>Wedding Details</h2>
+<div class="card">
+<p><b>Bride:</b> Shabrin</p>
+<p><b>Groom:</b> Md Yaseen</p>
+<p><b>Date:</b> 10 July 2026</p>
+<p><b>Time:</b> 1:00 PM</p>
+<p><b>Venue:</b> PW Colony, Macharla</p>
+<a class="btn" href="https://wa.me/919550517301">RSVP on WhatsApp</a>
+</div>
+</section>
+
+<section class="section">
+<h2>Countdown</h2>
+<div class="countdown">
+<div class="box"><span id="days">0</span>Days</div>
+<div class="box"><span id="hours">0</span>Hours</div>
+<div class="box"><span id="minutes">0</span>Minutes</div>
+<div class="box"><span id="seconds">0</span>Seconds</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="1000058232.png">
+<img src="1000058232.png">
+<img src="1000058232.png">
+</div>
+</section>
+
+<footer>
+<h2>Shabrin ❤️ Md Yaseen</h2>
+<p>We look forward to celebrating with you!</p>
+</footer>
+
+<script>
+const target=new Date("July 10, 2026 13:00:00").getTime();
+setInterval(()=>{
+const now=new Date().getTime();
+const d=target-now;
+document.getElementById('days').innerHTML=Math.floor(d/(1000*60*60*24));
+document.getElementById('hours').innerHTML=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+document.getElementById('minutes').innerHTML=Math.floor((d%(1000*60*60))/(1000*60));
+document.getElementById('seconds').innerHTML=Math.floor((d%(1000*60))/1000);
+},1000);
+</script>
+</body>
+</html>
